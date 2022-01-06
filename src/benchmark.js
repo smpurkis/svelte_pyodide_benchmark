@@ -28,13 +28,12 @@ async function sum_array(arr) {
 let arr = nj.random(100);
 export async function runNumjsBenchmark(arrSize) {
     let arr = nj.random(await arrSize);
-    let output = await timeit(nj.sum, 10, arr);
+    let output = await timeit(nj.sum, 1, arr);
     return output
 }
 
-
 export async function runRawFloatArrayBenchmark(arrSize) {
     let arr = create_array(await arrSize);
-    let output = await timeit(sum_array, 10, arr);
+    let output = await timeit(sum_array, 1, arr);
     return output
 }

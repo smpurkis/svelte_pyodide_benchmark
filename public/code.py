@@ -3,7 +3,7 @@ from time import time
 from js import array_size
 
 
-def timeit(fn, args, iterations: int = 10):
+def timeit(fn, args, iterations: int = 1):
     s = time()
     for _ in range(iterations):
         output = fn(*args)
